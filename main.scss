@@ -1,0 +1,289 @@
+// ---------------------
+//! Colors
+// ---------------------
+$color-dark: #272b30;
+$color-grey: #343b42;
+$color-skin: #F0BEAF;
+$color-batman-yellow: #f4d941;
+$color-skin-dark: #8b4513;
+$color-blue: #2196F3;
+$color-dark-sky: #1b52a0;
+$color-gold: #FDD835;
+$color-magneto-prime: #EE3152;
+$color-magneto-accent: #795998;
+$color-magnetism: #90CAF9;
+$color-hair-iceman: #B3695B;
+$color-elf: #0D47A1;
+$color-bamf: #CE93D8;
+$color-hair-storm: #ddd;
+$color-hair-cyclops: #9b651d;
+$color-hair-jean: #DC5846;
+
+// ---------------------
+//! GENERAL
+// ---------------------
+
+html {
+  height: 100%;
+  background:#fff;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+}
+
+
+.stripe {
+  width:100%;
+  position: relative;
+  height:392px;
+  padding:96px 32px;
+}
+
+.container {
+  width:200px;
+  height:200px;
+  border-radius: 50%;
+  position: relative;
+  margin:0 auto;
+  overflow: hidden;
+  z-index: 10;
+}
+
+// ---------
+//! Batman
+// ---------
+#batman {
+  background: $color-dark;
+
+  .container {
+    background: $color-dark-sky;
+    border: 2px solid darken(#fff, 10%);
+  }
+
+  .face {
+    width: 80px;
+    height: 80px;
+    background: $color-skin;
+    position: absolute;
+    margin: auto;
+    top: -28px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+  }
+  .face:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 20px solid $color-dark-sky;
+    border-left: 20px solid $color-dark-sky;
+    border-right: 20px solid $color-dark-sky;
+    width: 40px;
+    height: 0;
+  }
+  .face:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 20px solid $color-skin;
+    border-left: 20px solid $color-dark-sky;
+    border-right: 20px solid $color-dark-sky;
+    width: 40px;
+    height: 0;
+  }
+
+  .eye {
+    position: absolute;
+    top: 30px;
+    width: 10px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 100;
+  }
+  .eye.one {
+    right: 17px;
+    transform: rotate(-45deg);
+  }
+  .eye.two {
+    left: 17px;
+    transform: rotate(45deg);
+  }
+
+  .cowl {
+    width: 80px;
+    height: 40px;
+    background: $color-dark;
+    position: absolute;
+    z-index: 7;
+    margin: auto;
+    top: -60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .cowl:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 20px solid $color-dark;
+  }
+  .cowl:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 20px solid $color-dark;
+  }
+
+  .ear {
+    top: -30px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 40px solid $color-dark;
+    z-index: 8;
+  }
+
+  .ear.one {
+    left: 60px;
+    border-left: 20px solid transparent;
+  }
+
+  .ear.two {
+    right: 60px;
+    border-right: 20px solid transparent;
+  }
+
+  .cape {
+    position: absolute;
+    background: $color-dark;
+    width:140px;
+    height:150px;
+    top:129px;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    -webkit-animation-name: batmaaan; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: batmaaan;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes batmaaan {
+    from {width: 140px;}
+    to {width: 300px}
+  }
+
+  .body {
+    position: absolute;
+    width:100px;
+    height:150px;
+    background:$color-grey;
+    top:130px;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 40px;
+    z-index: 5;
+    overflow: hidden;
+  }
+
+  .nose {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    width:8px;
+    height:14px;
+    background:darken($color-skin, 15%);
+    top:36px;
+    border-radius: 4px;
+  }
+
+  .mouth {
+    position: absolute;
+    background: $color-dark;
+    width:30px;
+    height:2px;
+    border-radius: 0 0 100px 100px;
+    top:68px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 6;
+  }
+
+  .beard-dot {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: $color-dark;
+    border-radius: 50%;
+    z-index: 6;
+    margin: auto;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .neck {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: $color-grey;
+    z-index: 1;
+    margin: auto;
+    top: 35px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .sign-outter {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: $color-batman-yellow;
+    -moz-border-radius: 50px / 25px;
+    -webkit-border-radius: 50px / 25px;
+    border-radius: 50px / 25px;
+    margin: auto;
+    top: 120px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+  }
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table
+}
+
+.clearfix:after {
+  clear: both
+}
+
+.clearfix {
+  *zoom: 1
+}
+
+a {
+  outline: 0 !important
+}

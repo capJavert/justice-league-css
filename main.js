@@ -1,0 +1,1 @@
+//Look Doomsday, no JS!
