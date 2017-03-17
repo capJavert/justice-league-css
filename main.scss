@@ -8,16 +8,8 @@ $color-batman-yellow: #f4d941;
 $color-skin-dark: #8b4513;
 $color-blue: #2196F3;
 $color-dark-sky: #1b52a0;
-$color-gold: #FDD835;
-$color-magneto-prime: #EE3152;
-$color-magneto-accent: #795998;
-$color-magnetism: #90CAF9;
-$color-hair-iceman: #B3695B;
-$color-elf: #0D47A1;
-$color-bamf: #CE93D8;
-$color-hair-storm: #ddd;
-$color-hair-cyclops: #9b651d;
-$color-hair-jean: #DC5846;
+$color-superman-red: #e80909;
+$color-dark-brown: #795548;
 
 // ---------------------
 //! GENERAL
@@ -39,6 +31,9 @@ body {
   position: relative;
   height:392px;
   padding:96px 32px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container {
@@ -105,14 +100,15 @@ body {
     background: #fff;
     border-radius: 50%;
     z-index: 100;
-  }
-  .eye.one {
-    right: 17px;
-    transform: rotate(-45deg);
-  }
-  .eye.two {
-    left: 17px;
-    transform: rotate(45deg);
+
+    &.one {
+      right: 17px;
+      transform: rotate(-45deg);
+    }
+    &.two {
+      left: 17px;
+      transform: rotate(45deg);
+    }
   }
 
   .cowl {
@@ -157,16 +153,16 @@ body {
     height: 0;
     border-bottom: 40px solid $color-dark;
     z-index: 8;
-  }
 
-  .ear.one {
-    left: 60px;
-    border-left: 20px solid transparent;
-  }
+    &.one {
+      left: 60px;
+      border-left: 20px solid transparent;
+    }
 
-  .ear.two {
-    right: 60px;
-    border-right: 20px solid transparent;
+    &.two {
+      right: 60px;
+      border-right: 20px solid transparent;
+    }
   }
 
   .cape {
@@ -184,11 +180,6 @@ body {
     animation-name: batmaaan;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-  }
-
-  @keyframes batmaaan {
-    from {width: 120px;}
-    to {width: 300px}
   }
 
   .body {
@@ -258,6 +249,254 @@ body {
     position: absolute;
     width: 60px;
     height: 30px;
+    background: $color-dark;
+    -moz-border-radius: 50px / 25px;
+    -webkit-border-radius: 50px / 25px;
+    border-radius: 50px / 25px;
+    margin: auto;
+    top: 120px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    border: 6px solid $color-batman-yellow;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  @keyframes batmaaan {
+    from {width: 120px;}
+    to {width: 300px}
+  }
+}
+
+// ---------
+//! Superman
+// ---------
+#superman {
+  background: $color-blue;
+
+  .container {
+    background: #fff;
+    border: 2px solid $color-superman-red;
+    -webkit-animation-name: bizarro-container; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: bizarro-container;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  .hair {
+    width: 80px;
+    height: 10px;
+    background: $color-dark-brown;
+    position: absolute;
+    margin: auto;
+    top: -75px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  .hair:before {
+    width: 80px;
+    height: 25px;
+    background: $color-dark-brown;
+    position: absolute;
+    content: "";
+    top: -15px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+  }
+
+  .hair:after {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: -20px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 1px 7px 0 5px $color-dark-brown;
+    transform: rotate(-105deg);
+  }
+
+  .face {
+    width: 80px;
+    height: 80px;
+    background: $color-skin;
+    position: absolute;
+    margin: auto;
+    top: -28px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+  }
+  .face:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 20px solid #fff;
+    border-left: 20px solid #fff;
+    border-right: 20px solid #fff;
+    width: 40px;
+    height: 0;
+    -webkit-animation-name: bizarro-face; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: bizarro-face;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .face:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 20px solid $color-skin;
+    border-left: 20px solid #fff;
+    border-right: 20px solid #fff;
+    width: 40px;
+    height: 0;
+    -webkit-animation-name: bizarro-face-after; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: bizarro-face-after;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  .eye {
+    position: absolute;
+    top: 35px;
+    width: 8px;
+    height: 8px;
+    background: $color-dark-brown;
+    border-radius: 50%;
+    z-index: 100;
+    -webkit-animation-name: lasers; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: lasers;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    &.one {
+      right: 17px;
+    }
+    &.two {
+      left: 17px;
+    }
+  }
+
+  .ear {
+    position: absolute;
+    top: 35px;
+    width: 10px;
+    height: 15px;
+    background: $color-skin;
+    border-radius: 50%;
+    z-index: 100;
+
+    &.one {
+      right: -7px;
+    }
+    &.two {
+      left: -7px;
+    }
+  }
+
+  .cape {
+    position: absolute;
+    background: $color-superman-red;
+    width:120px;
+    height:150px;
+    top:129px;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+
+  .body {
+    position: absolute;
+    width:100px;
+    height:150px;
+    background:$color-blue;
+    top:130px;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 40px;
+    z-index: 5;
+    overflow: hidden;
+  }
+
+  .nose {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    width:8px;
+    height:14px;
+    background:darken($color-skin, 10%);
+    top:45px;
+    border-radius: 4px;
+  }
+
+  .mouth {
+    position: absolute;
+    background: $color-dark;
+    width:30px;
+    height:2px;
+    border-radius: 0 0 100px 100px;
+    top:68px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 6;
+  }
+
+  .beard-dot {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: $color-dark;
+    border-radius: 50%;
+    z-index: 6;
+    margin: auto;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .neck {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: $color-blue;
+    z-index: 1;
+    margin: auto;
+    top: 35px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .sign-outter {
+    position: absolute;
+    width: 60px;
+    height: 30px;
     background: $color-batman-yellow;
     -moz-border-radius: 50px / 25px;
     -webkit-border-radius: 50px / 25px;
@@ -268,6 +507,45 @@ body {
     bottom: 0;
     right: 0;
     z-index: 9;
+    border: 5px solid $color-superman-red;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  @keyframes lasers {
+    from { background: $color-dark-brown; }
+    to { background: #f00; }
+  }
+
+  @keyframes bizarro-container {
+    from { background: #fff; }
+    to { background: $color-dark; }
+  }
+
+  @keyframes bizarro-face {
+    from { border-color: #fff; }
+    to { border-color: $color-dark; }
+  }
+
+  @keyframes bizarro-face-after {
+    from {
+      border-right-color: #fff;
+      border-left-color: #fff; }
+    to {
+      border-right-color: $color-dark;
+      border-left-color: $color-dark;
+    }
+  }
+
+  @keyframes bizarro-red {
+    from { background: $color-superman-red; }
+    to { background: #512da8; }
+  }
+
+  @keyframes bizarro-blue {
+    from { background: $color-blue; }
+    to { background: #283593; }
   }
 }
 

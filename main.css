@@ -10,7 +10,10 @@ body {
   width: 100%;
   position: relative;
   height: 392px;
-  padding: 96px 32px; }
+  padding: 96px 32px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .container {
   width: 200px;
@@ -65,12 +68,12 @@ body {
     background: #fff;
     border-radius: 50%;
     z-index: 100; }
-  #batman .eye.one {
-    right: 17px;
-    transform: rotate(-45deg); }
-  #batman .eye.two {
-    left: 17px;
-    transform: rotate(45deg); }
+    #batman .eye.one {
+      right: 17px;
+      transform: rotate(-45deg); }
+    #batman .eye.two {
+      left: 17px;
+      transform: rotate(45deg); }
   #batman .cowl {
     width: 80px;
     height: 40px;
@@ -109,12 +112,12 @@ body {
     height: 0;
     border-bottom: 40px solid #272b30;
     z-index: 8; }
-  #batman .ear.one {
-    left: 60px;
-    border-left: 20px solid transparent; }
-  #batman .ear.two {
-    right: 60px;
-    border-right: 20px solid transparent; }
+    #batman .ear.one {
+      left: 60px;
+      border-left: 20px solid transparent; }
+    #batman .ear.two {
+      right: 60px;
+      border-right: 20px solid transparent; }
   #batman .cape {
     position: absolute;
     background: #272b30;
@@ -132,11 +135,6 @@ body {
     animation-name: batmaaan;
     animation-duration: 2s;
     animation-iteration-count: infinite; }
-@keyframes batmaaan {
-  from {
-    width: 120px; }
-  to {
-    width: 300px; } }
   #batman .body {
     position: absolute;
     width: 100px;
@@ -194,6 +192,221 @@ body {
     position: absolute;
     width: 60px;
     height: 30px;
+    background: #272b30;
+    -moz-border-radius: 50px / 25px;
+    -webkit-border-radius: 50px / 25px;
+    border-radius: 50px / 25px;
+    margin: auto;
+    top: 120px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    border: 6px solid #f4d941;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+@keyframes batmaaan {
+  from {
+    width: 120px; }
+  to {
+    width: 300px; } }
+#superman {
+  background: #2196F3; }
+  #superman .container {
+    background: #fff;
+    border: 2px solid #e80909;
+    -webkit-animation-name: bizarro-container;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: bizarro-container;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+  #superman .hair {
+    width: 80px;
+    height: 10px;
+    background: #795548;
+    position: absolute;
+    margin: auto;
+    top: -75px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5; }
+  #superman .hair:before {
+    width: 80px;
+    height: 25px;
+    background: #795548;
+    position: absolute;
+    content: "";
+    top: -15px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px; }
+  #superman .hair:after {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: -20px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 1px 7px 0 5px #795548;
+    transform: rotate(-105deg); }
+  #superman .face {
+    width: 80px;
+    height: 80px;
+    background: #F0BEAF;
+    position: absolute;
+    margin: auto;
+    top: -28px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4; }
+  #superman .face:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 20px solid #fff;
+    border-left: 20px solid #fff;
+    border-right: 20px solid #fff;
+    width: 40px;
+    height: 0;
+    -webkit-animation-name: bizarro-face;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: bizarro-face;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+  #superman .face:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 20px solid #F0BEAF;
+    border-left: 20px solid #fff;
+    border-right: 20px solid #fff;
+    width: 40px;
+    height: 0;
+    -webkit-animation-name: bizarro-face-after;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: bizarro-face-after;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+  #superman .eye {
+    position: absolute;
+    top: 35px;
+    width: 8px;
+    height: 8px;
+    background: #795548;
+    border-radius: 50%;
+    z-index: 100;
+    -webkit-animation-name: lasers;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite;
+    animation-name: lasers;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+    #superman .eye.one {
+      right: 17px; }
+    #superman .eye.two {
+      left: 17px; }
+  #superman .ear {
+    position: absolute;
+    top: 35px;
+    width: 10px;
+    height: 15px;
+    background: #F0BEAF;
+    border-radius: 50%;
+    z-index: 100; }
+    #superman .ear.one {
+      right: -7px; }
+    #superman .ear.two {
+      left: -7px; }
+  #superman .cape {
+    position: absolute;
+    background: #e80909;
+    width: 120px;
+    height: 150px;
+    top: 129px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%; }
+  #superman .body {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background: #2196F3;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40px;
+    z-index: 5;
+    overflow: hidden; }
+  #superman .nose {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 14px;
+    background: #e89b84;
+    top: 45px;
+    border-radius: 4px; }
+  #superman .mouth {
+    position: absolute;
+    background: #272b30;
+    width: 30px;
+    height: 2px;
+    border-radius: 0 0 100px 100px;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6; }
+  #superman .beard-dot {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #272b30;
+    border-radius: 50%;
+    z-index: 6;
+    margin: auto;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    right: 0; }
+  #superman .neck {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: #2196F3;
+    z-index: 1;
+    margin: auto;
+    top: 35px;
+    left: 0;
+    bottom: 0;
+    right: 0; }
+  #superman .sign-outter {
+    position: absolute;
+    width: 60px;
+    height: 30px;
     background: #f4d941;
     -moz-border-radius: 50px / 25px;
     -webkit-border-radius: 50px / 25px;
@@ -203,8 +416,43 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 9; }
-
+    z-index: 9;
+    border: 5px solid #e80909;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+@keyframes lasers {
+  from {
+    background: #795548; }
+  to {
+    background: #f00; } }
+@keyframes bizarro-container {
+  from {
+    background: #fff; }
+  to {
+    background: #272b30; } }
+@keyframes bizarro-face {
+  from {
+    border-color: #fff; }
+  to {
+    border-color: #272b30; } }
+@keyframes bizarro-face-after {
+  from {
+    border-right-color: #fff;
+    border-left-color: #fff; }
+  to {
+    border-right-color: #272b30;
+    border-left-color: #272b30; } }
+@keyframes bizarro-red {
+  from {
+    background: #e80909; }
+  to {
+    background: #512da8; } }
+@keyframes bizarro-blue {
+  from {
+    background: #2196F3; }
+  to {
+    background: #283593; } }
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table; }
