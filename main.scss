@@ -172,7 +172,7 @@ body {
   .cape {
     position: absolute;
     background: $color-dark;
-    width:140px;
+    width:120px;
     height:150px;
     top:129px;
     left:50%;
@@ -187,7 +187,7 @@ body {
   }
 
   @keyframes batmaaan {
-    from {width: 140px;}
+    from {width: 120px;}
     to {width: 300px}
   }
 

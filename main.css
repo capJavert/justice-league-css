@@ -118,7 +118,7 @@ body {
   #batman .cape {
     position: absolute;
     background: #272b30;
-    width: 140px;
+    width: 120px;
     height: 150px;
     top: 129px;
     left: 50%;
@@ -134,7 +134,7 @@ body {
     animation-iteration-count: infinite; }
 @keyframes batmaaan {
   from {
-    width: 140px; }
+    width: 120px; }
   to {
     width: 300px; } }
   #batman .body {
